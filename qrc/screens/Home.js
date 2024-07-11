@@ -1,14 +1,14 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import { View, Button, StyleSheet } from 'react-native';
+import React from 'react';
+import { useNavigation } from '@react-navigation/native';
 
-const Home = () => {
-  return (
-    <View style={styles.container}>
+export default function Home() {
+  const navigation = useNavigation();
 
-      <Text>Hello World..!!</Text>
-
-      <StatusBar style="auto" />
-    </View>
+  return(
+    <view style={StyleSheet.container}>
+        <Button title='Scan' onPress={() => navigation.navigate('Scanner')} />
+    </view>
   );
 }
 
@@ -20,5 +20,3 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
   },
 });
-
-export default Home;

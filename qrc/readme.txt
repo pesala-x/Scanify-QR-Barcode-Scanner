@@ -1,3 +1,5 @@
+----------------------plese install this packages before you start this project-----------------------------
+
 npm i expo-barcode-scanner
 npm install @react-navigation/native
 npx expo install react-native-screens react-native-safe-area-context
