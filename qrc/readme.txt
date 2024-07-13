@@ -6,4 +6,9 @@ npx expo install react-native-screens react-native-safe-area-context
 npm install @react-navigation/stack
 expo install expo-linking
 expo install expo-barcode-scanner
+expo install expo-camera
+
+--------------------------------- UPDATE ALL PACAGES ---------------------------
+npm install expo@~51.0.20 react-native-safe-area-context@4.10.1 react-native-screens@3.31.1
+
 

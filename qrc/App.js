@@ -1,5 +1,5 @@
 import React from 'react';
-
+import { Text, View, StyleSheet, Button } from 'react-native';
 import Scanner from './screens/Scanner';
 import Home from './screens/Home';
 
@@ -11,21 +11,17 @@ const Stack = createStackNavigator();
 function App() {
   return (
     
-      <Stack.Navigator>
+      <Stack.Navigator
+      screenOptions={{
+          headerShown: false, // This will hide the header for all screens
+        }}
+      >
         <Stack.Screen name="Home" component={Home} />
         <Stack.Screen name="Scanner" component={Scanner} />
       </Stack.Navigator>
   );
 }
 
-// const styles = StyleSheet.create({
-//   container: {
-//     flex: 1,
-//     backgroundColor: '#fff',
-//     alignItems: 'center',
-//     justifyContent: 'center',
-//   },
-// });
 export default ()=> {
   return(
     <NavigationContainer>
@@ -33,4 +29,3 @@ export default ()=> {
     </NavigationContainer>
   )
 }
-
