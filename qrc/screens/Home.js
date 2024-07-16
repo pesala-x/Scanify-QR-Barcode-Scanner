@@ -20,7 +20,8 @@ export default function Home() {
         </TouchableOpacity>
 
         <View style={styles.devContainer}>
-          <Text style={styles.devText}>Developed by pesala winodith</Text>
+          <Text style={styles.devText}>Developed by Pesala Winodith</Text>
+          <Text style={styles.devText2}>licenced under the MIT</Text>
         </View>
         
       </View>
@@ -68,28 +69,8 @@ const styles = StyleSheet.create({
     color: '#fff',
     fontSize: 14,
   },
+  devText2: {
+    color: '#fff',
+    fontSize: 11,
+  },
 });
-
-// import { View, Button, StyleSheet } from 'react-native';
-
-// import React from 'react';
-// import { useNavigation } from '@react-navigation/native';
-
-// export default function Home() {
-//   const navigation = useNavigation();
-
-//   return(
-//     <view style={StyleSheet.container}>
-//         <Button title='Scan' onPress={() => navigation.navigate('Scanner')} />
-//     </view>
-//   );
-// }
-
-// const styles = StyleSheet.create({
-//   container: {
-//     flex: 1,
-//     backgroundColor: '#fff',
-//     alignItems: 'center',
-//     justifyContent: 'center',
-//   },
-// });
