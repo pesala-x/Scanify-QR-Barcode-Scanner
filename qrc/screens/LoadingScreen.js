@@ -1,52 +1,53 @@
-// import React, { useRef, useEffect, useState } from 'react';
-// import { View, StyleSheet, Text } from 'react-native';
-// import AnimatedLoader from 'react-native-animated-loader';
-// import LottieView from 'lottie-react-native';
+import React, { useEffect } from 'react';
+import { View, StyleSheet, StatusBar,Text } from 'react-native';
+import LottieView from 'lottie-react-native';
+
+export default function LoadingScreen({ navigation }) {
+
+  useEffect(() => {
+    setTimeout(() => {
+      navigation.replace('Home'); // Navigate to Home screen after loading
+    }, 5000); // Adjust the duration as needed
+  }, [navigation]);
+
+  return (
+    <View style={styles.container}>
+      <View style= {styles.welcome}>
+        <LottieView
+          source={require('../assets/animations/Animation - 1721140587874.json')} // Ensure this path is correct
+          autoPlay
+          loop
+          style={styles.animation}
+        />
+      </View>
+        <Text style={styles.text}>PESALA-X</Text>
+        <Text style={styles.text2}> @open source corporation limited</Text>
+        <StatusBar style="auto" />
+    </View>
+  );
+}
 
 
-// export default function LoadingScreen({ navigation }) {
-//   const [visible, setVisible] = useState(true);
-
-//   useEffect(() => {
-//     setTimeout(() => { 
-//       setVisible(false);
-//       // navigation.replace('Home'); // Navigate to Home screen after loading
-//     }, 5000); // Adjust the duration as needed
-//   }, [navigation]);
-
-//   return (
-//     <View style={styles.container}>
-//     <LottieView style={styles.lottie}
-//      source={require('../assets/blackShoe.json')} autoPlay loop />
-//       { <AnimatedLoader
-//         visible={visible}
-//         overlayColor="rgba(255,255,255,0.75)"    
-//         source={require('../assets/Animation - 1721112760415.json')} // Add your loader JSON file in the assets folder
-//         animationStyle={styles.lottie}
-//         speed={1}
-//       />
-    
-//       }
-
-
-//     </View>
-//   );
-// }
-
-// const styles = StyleSheet.create({
-//   container: {
-//     flex: 1,
-//     // justifyContent: 'center',
-//     alignItems: 'center',
-//     backgroundColor: '#000',
-//   },
-//   lottie: {
-//     width: 400,
-//     height: 400,
-//   },
-//   loadingText: {
-//     marginTop: 20,
-//     fontSize: 18,
-//     color: '#fff',
-//   },
-// });
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    justifyContent: 'space-around',
+    alignItems: 'center',
+    backgroundColor: '#fff', // Background color during loading
+    paddingVertical: 100
+  },
+  text:{
+    fontSize: 30,
+    paddingBottom:0
+  },
+  text2:{
+    fontSize: 15
+  },
+  welcome: {
+    width: 300, // Adjust size as needed
+    aspectRatio:1
+  },
+  animation:{
+    flex: 1
+  }
+});
