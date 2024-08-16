@@ -1,6 +1,7 @@
 import React from 'react';
 import { View, Button, StyleSheet, Text, TouchableOpacity, ImageBackground } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
+import Icon from 'react-native-vector-icons/MaterialIcons';
 
 export default function Home() {
   const navigation = useNavigation();
@@ -10,8 +11,24 @@ export default function Home() {
       source={require('../assets/bacground.jpeg')} 
       style={styles.background}
     >
+    
+      <View style={styles.footer}>
+        <TouchableOpacity onPress={() => navigation.navigate('Home')}>
+          <Icon name="home" size={24} color="#000" />
+        </TouchableOpacity>
+        <TouchableOpacity onPress={() => navigation.navigate('UserProfile')}>
+          <Icon name="person" size={24} color="#000" />
+        </TouchableOpacity>
+        <TouchableOpacity onPress={() => navigation.navigate('UserPlace')}>
+          <Icon name="place" size={24} color="#000" />
+        </TouchableOpacity>
+        { <TouchableOpacity onPress={() => navigation.navigate('Setting')}>
+          <Icon name="settings" size={24} color="#000" />
+        </TouchableOpacity> }
+      </View>
+
       <View style={styles.container}>
-        <Text style={styles.header}>Welcome to QR Scanner</Text>
+        <Text style={styles.header}>Scan QR & Barcodes</Text>
         <TouchableOpacity 
           style={styles.button} 
           onPress={() => navigation.navigate('Scanner')}
@@ -49,7 +66,7 @@ const styles = StyleSheet.create({
     textAlign: 'center',
   },
   button: {
-    backgroundColor: '#1e90ff',
+    backgroundColor: '#316FF6',
     padding: 15,
     borderRadius: 10,
     alignItems: 'center',
@@ -72,5 +89,17 @@ const styles = StyleSheet.create({
   devText2: {
     color: '#fff',
     fontSize: 11,
+  },
+  footer: {
+    flexDirection: 'row',
+    justifyContent: 'space-evenly',
+    paddingVertical: 5,
+    paddingHorizontal:10,
+    backgroundColor: '#316FF6',
+    borderRadius: 5,
+    position: 'relative',
+    bottom: 0,
+    left: 0,
+    right: 0,
   },
 });

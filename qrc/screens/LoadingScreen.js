@@ -34,7 +34,7 @@ const styles = StyleSheet.create({
     justifyContent: 'space-around',
     alignItems: 'center',
     backgroundColor: '#fff', // Background color during loading
-    paddingVertical: 100
+    paddingVertical: 200
   },
   text:{
     fontSize: 30,
