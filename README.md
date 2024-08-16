@@ -1,10 +1,5 @@
-Here's a sample `README.md` file for your React Native QR-code scanner project:
-
----
 
 # QR Scanner React Native App
-
-![QR Scanner Logo](https://user-images.githubusercontent.com/your-image-url)  <!--logo or an image -->
 
 ## Overview
 
@@ -17,18 +12,13 @@ QR Scanner is a simple and efficient React Native application developed using Ex
 - **Smooth Animations**: Includes an animated loading screen for a polished user experience.
 - **Attractive UI**: Designed with an appealing and intuitive interface.
 
-## Screenshots
-
-![Home Screen](https://user-images.githubusercontent.com/home-screen-url) <!-- Replace with actual screenshots -->
-![QR Scanner Screen](https://user-images.githubusercontent.com/scanner-screen-url)
-
 ## Installation
 
 To get started with the QR Scanner app, follow these steps:
 
 1. **Clone the repository**:
    ```bash
-   git clone https://github.com/your-username/QR-Scanner-ReactNative.git
+   git clone https://github.com/pesala-x/QR-Scanner-ReactNative.git
    cd QR-Scanner-ReactNative
    ```
 
@@ -54,6 +44,7 @@ To get started with the QR Scanner app, follow these steps:
 - **Expo**: To streamline development and manage native components.
 - **React Navigation**: For navigating between different screens.
 - **Moti**: For creating smooth animations.
+- **lottiefiles**: For smooth animations.
 
 ## Contributing
 
@@ -70,7 +61,3 @@ Developed by Pesala Winodith.
 ## Acknowledgements
 
 - Special thanks to the open-source community for the amazing tools and resources that made this project possible.
-
----
-
-This README template provides a good starting point for your project. Make sure to replace placeholders (like image URLs, repository URL, and author information) with your actual project details. If you have any additional features or sections you'd like to add, feel free to customize it further.
