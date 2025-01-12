@@ -18,8 +18,8 @@ To get started with the QR Scanner app, follow these steps:
 
 1. **Clone the repository**:
    ```bash
-   git clone https://github.com/pesala-x/QR-Scanner-ReactNative.git
-   cd QR-Scanner-ReactNative
+   git clone https://github.com/pesala-x/Scanify-QR-Barcode-Scanner.git
+   cd Scanify-QR-Barcode-Scanner
    ```
 
 2. **Install dependencies**:
